@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PushBooks</title>
+  <link href="" rel="photos">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-zR2sul2oRHkLHv7zFQhDGnPK70YUn7b/hKM+94tG03gP8hQig+6bG74KCv4rbbvzo+rg0h0윌04r4mQ8D+XQ==" crossorigin="anonymous"/>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c2yuxv1rArEoIBiBQoNW9OXzXc4ORVBkYbwRwlRMiQhuHuoFte1lGHkgh7hg8K7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C8yI/IlNtQ6PS/jLV49VBsgNKm0WX2PqeCqjLAhcesUvw46gVKmOrM8PoSvGYk0d" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+                  <img src="data:image/png;base64,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" alt="Book Logo" class="w-10 h-10 mr-4">
+          <h1 class="text-3xl font-bold">PushBooks</h1>
+          <nav>
+            <ul class="flex space-x-4">
+              <li><a href="#" class="hover:text-gray-300">Home</a></li>
+              <li><a href="#" class="hover:text-gray-300">About Us</a></li>
+              <li><a href="#" class="hover:text-gray-300">Books</a></li>
+              <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+  <section class="hero bg-cover bg-center bg-no-repeat py-16" style="background-image: url('land/hero2.png');">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Unleash Your  <span class="text-red-400">Imaginations</span>  , One Book at a Time</h2>
+      <p class="text-lg mb-8">Dive into a world of endless possibilities with our curated collection of captivating reads.</p>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get Started</button>
+    </div>
+  </section>
+
+  <section class="features bg-white py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Our Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <i class="fa-solid fa-book-open fa-3x text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Diverse Collection</h3>
+          <p>From thrilling adventures to heartwarming stories, our books offer something for everyone. Expand your knowledge, spark your creativity, and escape the ordinary. </p>
+        </div>
+        <div class="text-center">
+          <i class="fa-solid fa-user-group fa-3x text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Community</h3>
+          <p>Discover a world of endless possibilities with our vibrant book community. Connect with fellow readers, share your thoughts and recommendations, and participate in engaging discussions. Explore exclusive book clubs, author Q&As, and literary challenges. Join us today and become part of a passionate community of bookworms.</p>
+        </div>
+        <div class="text-center">
+          <i class="fa-solid fa-shield-halved fa-3x text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Secure Platform</h3>
+          <p>Expand your knowledge, spark your creativity, and escape the ordinary. Download your next favorite book today and embark on a literary journey that will leave you inspired and entertained.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials bg-gray-100 py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">What Our Readers Say</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <p class="text-gray-700 mb-4">"I rely on this bookstore for all my academic needs. Their extensive collection of textbooks and research materials is invaluable. The competitive prices and frequent student discounts make it the go-to place for all my study essentials."</p>
+        <div class="flex items-center">
+          <img src="land/pic 1.JFIF" alt="Client 3" class="w-12 h-12 rounded-full mr-3">
+          <div>
+            <h3 class="font-semibold text-gray-800">Daniel Tong</h3>
+            <p class="text-gray-500 text-sm">COO, Company 123</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <p class="text-gray-700 mb-4">"EchoWorks delivers exceptional quality and service every single time. They truly care about our needs."</p>
+        <div class="flex items-center">
+          <img src="land/pic 2.JFIF" alt="Client 3" class="w-12 h-12 rounded-full mr-3">
+          <div>
+            <h3 class="font-semibold text-gray-800">Parker Mike</h3>
+            <p class="text-gray-500 text-sm"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <p class="text-gray-700 mb-4"> "As a busy professional, finding time to visit physical bookstores can be challenging. This online bookstore is a lifesaver! I can browse and purchase books from the comfort of my home, and have them delivered right to my doorstep."</p>
+        <div class="flex items-center">
+          <img src="land/pic 3.JFIF" alt="Client 3" class="w-12 h-12 rounded-full mr-3">
+          <div>
+            <h3 class="font-semibold text-gray-800">Peter Simon</h3>
+            <p class="text-gray-500 text-sm"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <p class="text-gray-700 mb-4">I've been a loyal customer for years. The wide selection of books, coupled with their fast shipping and excellent customer service, makes my book-buying experience effortless. I've discovered so many hidden gems through their recommendations!"</p>
+        <div class="flex items-center">
+          <img src="land/pic 5.JFIF" alt="Client 3" class="w-12 h-12 rounded-full mr-3">
+          <div>
+            <h3 class="font-semibold text-gray-800">James Sil</h3>
+            <p class="text-gray-500 text-sm">COO, Company ombre</p>
+          </div>
+        </div>
+      </div>
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"
+
+
+          <footer class="bg-blue-800 text-white py-4"> 
+
+            <div class="container mx-auto text-center">
+              <p>&copy; 2023 PushBooks. All Rights Reserved.</p>
+              <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-blue-400 hover:text-gray-300">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-blue-800 hover:text-gray-300">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#" class="text-red-600 hover:text-gray-300">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </footer>
+        </body>
+        </html>
+                    
+            
